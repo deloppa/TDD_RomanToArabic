@@ -27,11 +27,31 @@ public static class Converter
 
         if (roman.Equals("")) throw new ArgumentException("String cannot be empty");
 
-        if(!IsValid(roman)) throw new ArgumentException("Write valid roman number between 1 and 3999");
+        if(!IsValid(roman)) throw new ArgumentException("Write valid roman number between I(1) and MMMCMXCIX(3999)");
 
         if (_values.ContainsKey(roman)) return _values[roman];
 
         int result = 0;
+
+        while(roman.Length > 0)
+        {
+            if(roman.Length >= 2)
+            {
+                string twoChars = roman.Substring(0, 2);
+                if (_values.ContainsKey(twoChars))
+                {
+                    result += _values[twoChars];
+                    roman = roman.Substring(2);
+
+                    continue;
+                }
+            }
+
+            string oneChar = roman.Substring(0, 1);
+            result += _values[oneChar];
+            roman = roman.Substring(1);
+
+        }
 
 
         return result;

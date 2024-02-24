@@ -30,7 +30,7 @@ namespace RomanToArabic.Tests
                 Converter.ConvertRomanToArabic("VII_I");
             });
 
-            Assert.AreEqual("Write valid roman number between 1 and 3999", exeption.Message);
+            Assert.AreEqual("Write valid roman number between I(1) and MMMCMXCIX(3999)", exeption.Message);
         }
 
         [TestMethod()]
@@ -41,7 +41,7 @@ namespace RomanToArabic.Tests
                 Converter.ConvertRomanToArabic("1345");
             });
 
-            Assert.AreEqual("Write valid roman number between 1 and 3999", exeption.Message);
+            Assert.AreEqual("Write valid roman number between I(1) and MMMCMXCIX(3999)", exeption.Message);
         }
 
         [TestMethod()]
@@ -52,7 +52,7 @@ namespace RomanToArabic.Tests
                 Converter.ConvertRomanToArabic("MMMM");
             });
 
-            Assert.AreEqual("Write valid roman number between 1 and 3999", exeption.Message);
+            Assert.AreEqual("Write valid roman number between I(1) and MMMCMXCIX(3999)", exeption.Message);
         }
 
         [TestMethod]
@@ -131,6 +131,144 @@ namespace RomanToArabic.Tests
         public void WhenM_Then1000()
         {
             Assert.AreEqual(1000, Converter.ConvertRomanToArabic("M"));
+        }
+
+        [TestMethod()]
+        public void WhenXVII_Then17()
+        {
+            Assert.AreEqual(17, Converter.ConvertRomanToArabic("XVII"));
+        }
+
+        [TestMethod()]
+        public void WhenXXIV_Then24()
+        {
+            Assert.AreEqual(24, Converter.ConvertRomanToArabic("XXIV"));
+        }
+
+        [TestMethod()]
+        public void WhenXXX_Then30()
+        {
+            Assert.AreEqual(30, Converter.ConvertRomanToArabic("XXX"));
+        }
+
+        [TestMethod()]
+        public void WhenXLVII_Then47()
+        {
+            Assert.AreEqual(47, Converter.ConvertRomanToArabic("XLVII"));
+        }
+
+        [TestMethod()]
+        public void WhenLVIII_Then58()
+        {
+            Assert.AreEqual(58, Converter.ConvertRomanToArabic("LVIII"));
+        }
+
+        [TestMethod()]
+        public void WhenLXXI_Then71()
+        {
+            Assert.AreEqual(71, Converter.ConvertRomanToArabic("LXXI"));
+        }
+
+        [TestMethod()]
+        public void WhenLXXXVIII_Then88()
+        {
+            Assert.AreEqual(88, Converter.ConvertRomanToArabic("LXXXVIII"));
+        }
+
+        [TestMethod()]
+        public void WhenXCIX_Then99()
+        {
+            Assert.AreEqual(99, Converter.ConvertRomanToArabic("XCIX"));
+        }
+
+        [TestMethod()]
+        public void WhenCXL_Then140()
+        {
+            Assert.AreEqual(140, Converter.ConvertRomanToArabic("CXL"));
+        }
+
+        [TestMethod()]
+        public void WhenCXCIV_Then194()
+        {
+            Assert.AreEqual(194, Converter.ConvertRomanToArabic("CXCIV"));
+        }
+
+        [TestMethod()]
+        public void WhenCCXLVII_Then247()
+        {
+            Assert.AreEqual(247, Converter.ConvertRomanToArabic("CCXLVII"));
+        }
+
+        [TestMethod()]
+        public void WhenCCLXXX_Then280()
+        {
+            Assert.AreEqual(280, Converter.ConvertRomanToArabic("CCLXXX"));
+        }
+
+        [TestMethod()]
+        public void WhenCCCXXXIII_Then333()
+        {
+            Assert.AreEqual(333, Converter.ConvertRomanToArabic("CCCXXXIII"));
+        }
+
+        [TestMethod()]
+        public void WhenCDLXXII_Then472()
+        {
+            Assert.AreEqual(472, Converter.ConvertRomanToArabic("CDLXXII"));
+        }
+
+        [TestMethod()]
+        public void WhenDXCIX_Then599()
+        {
+            Assert.AreEqual(599, Converter.ConvertRomanToArabic("DXCIX"));
+        }
+
+        [TestMethod()]
+        public void WhenDCCCLVIII_Then858()
+        {
+            Assert.AreEqual(858, Converter.ConvertRomanToArabic("DCCCLVIII"));
+        }
+
+        [TestMethod()]
+        public void WhenCMXC_Then990()
+        {
+            Assert.AreEqual(990, Converter.ConvertRomanToArabic("CMXC"));
+        }
+
+        [TestMethod()]
+        public void WhenMCDLIV_Then1454()
+        {
+            Assert.AreEqual(1454, Converter.ConvertRomanToArabic("MCDLIV"));
+        }
+
+        [TestMethod()]
+        public void WhenMCMXCII_Then1992()
+        {
+            Assert.AreEqual(1992, Converter.ConvertRomanToArabic("MCMXCII"));
+        }
+
+        [TestMethod()]
+        public void WhenMMIX_Then2009()
+        {
+            Assert.AreEqual(2009, Converter.ConvertRomanToArabic("MMIX"));
+        }
+
+        [TestMethod()]
+        public void WhenMMDCCCVI_Then2806()
+        {
+            Assert.AreEqual(2806, Converter.ConvertRomanToArabic("MMDCCCVI"));
+        }
+
+        [TestMethod()]
+        public void WhenMMMCDXXXVI_Then3436()
+        {
+            Assert.AreEqual(3436, Converter.ConvertRomanToArabic("MMMCDXXXVI"));
+        }
+
+        [TestMethod()]
+        public void WhenMMMCMXCIX_Then3999()
+        {
+            Assert.AreEqual(3999, Converter.ConvertRomanToArabic("MMMCMXCIX"));
         }
     }
 }
