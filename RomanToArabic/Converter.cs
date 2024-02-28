@@ -1,7 +1,11 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace RomanToArabic;
+/// <summary> Roman To Arabic Converter </summary>
+/// <author>Svitlana Bakun</author>
+/// <project>RomanToArabic</project>
+/// <version>1.0.0</version>
 
+namespace RomanToArabic;
 public static class Converter
 {
     private static Dictionary<string, int> _values = new Dictionary<string, int>()
